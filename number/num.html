@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number</title>
+</head>
+
+<style>
+    label button {
+        background-color: rgb(93, 95, 231);
+        color: rgb(223, 103, 6);
+        padding: 3rem;
+        font-family: sans-serif;
+        border-radius: 8rem;
+        margin-top: 2rem;
+        -webkit-text-stroke-width: 1px;
+        font-size: 60px;
+    }
+</style>
+
+<body>
+
+
+    <style>
+        body {
+            background-color: rgb(195, 227, 255);
+            background-repeat: no-repeat;
+            background-size: 100%;
+
+        }
+
+        .result {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+            font-size: 100px;
+            font-family: sans-serif;
+            color: rgb(8, 59, 136);
+        }
+    </style>
+    <div class="result">
+        <h2><label><button onclick="document.getElementById('demo').innerHTML = getRndInteger(0,100)">CLICK ME</button>
+        </h2>
+        </label>
+    </div>
+
+
+    <p id="demo"></p>
+
+    <script>
+        function getRndInteger(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+
+    </script>
+
+</body>
+
+</html>

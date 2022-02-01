@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLIP COIN</title>
+</head>
+
+<style>
+    h1 {
+        color: rgb(46, 119, 230);
+        text-align: center;
+    }
+
+    label {
+        background-color: rgb(21, 160, 40);
+        color: white;
+        padding: 0.5rem;
+        font-family: sans-serif;
+        border-radius: 0.3rem;
+        margin-top: 1rem;
+    }
+</style>
+
+<body>
+    <h1><label><button id="click" type="button">CLICK ME</h1></label>
+    <h1>
+        <p>You Got : <span id="result"></span><br>You Got Head : <span id="heads"></span><br>You got Tails : <span
+                id="tails"></span></p>
+    </h1>
+    <style>
+        body {
+            background-color: rgb(215, 240, 187);
+            background-repeat: no-repeat;
+            background-size: 100%;
+
+        }
+    </style>
+</body>
+<script>
+    document.getElementById('click').onclick = click;
+
+    var heads = 0;
+    var tails = 0;
+
+    function click() {
+        x = (Math.floor(Math.random() * 2) == 0);
+        if (x == true) {
+            document.getElementById('result').innerHTML = "Head";
+            heads = heads + 1;
+        } else {
+            document.getElementById('result').innerHTML = "Tails";
+            tails = tails + 1
+        }
+        document.getElementById('heads').innerHTML = heads;
+        document.getElementById('tails').innerHTML = tails;
+    };
+</script>
+
+</html>
